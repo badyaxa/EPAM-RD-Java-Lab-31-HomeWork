@@ -15,8 +15,6 @@ public class Pet {
     }
 
     public void printPets() {
-        System.out.println("animals.size() = " + animals.size());
-
         for (Animal animal : animals) {
             System.out.println(animal.getClass().getSimpleName());
         }
