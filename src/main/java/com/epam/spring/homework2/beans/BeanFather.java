@@ -2,13 +2,14 @@ package com.epam.spring.homework2.beans;
 
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class BeanFather {
 
     private String name;
     private String value;
 
     public BeanFather(String name, String value) {
+        System.out.println("BeanFather.this.getClass().getSimpleName() = " + this.getClass().getSimpleName());
         this.name = name;
         this.value = value;
     }
