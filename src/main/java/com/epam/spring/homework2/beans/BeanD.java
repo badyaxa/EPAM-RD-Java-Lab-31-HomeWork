@@ -1,10 +1,16 @@
 package com.epam.spring.homework2.beans;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Component
+
+//Біни BeanB, BeanC, BeanD значення отримують з *.properties файлу
+@ConfigurationProperties(prefix = "beanD")
+
+//Забезпечити такий порядок створення бінів: BeanD, BeanB, BeanC
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class BeanD extends BeanFather {
     /**

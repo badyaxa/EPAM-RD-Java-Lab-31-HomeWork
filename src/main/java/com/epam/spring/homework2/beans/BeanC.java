@@ -1,10 +1,15 @@
 package com.epam.spring.homework2.beans;
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
 
 @Component
 
+//Біни BeanB, BeanC, BeanD значення отримують з *.properties файлу
+@ConfigurationProperties(prefix = "beanC")
+
+//Забезпечити такий порядок створення бінів: BeanD, BeanB, BeanC
 @DependsOn(value = "beanB")
 public class BeanC extends BeanFather {
     /**
