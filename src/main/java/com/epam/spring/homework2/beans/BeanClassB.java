@@ -11,12 +11,12 @@ public class BeanClassB extends BeanFather {
         System.out.println("-- START -----B-------------- customInitMethodB()");
     }
 
-    public void customDestroyMethodB() {
-        System.out.println("-- START -----B-------------- customDestroyMethodB()");
-    }
-
     public void initMethodChangedInCustomBeanFactoryPostProcessorClass() {
         System.out.println("-- START -----B-------------- initMethodChangedInCustomBeanFactoryPostProcessorClass()");
+    }
+
+    public void customDestroyMethodB() {
+        System.out.println("-- START -----B-------------- customDestroyMethodB()");
     }
 
 }
