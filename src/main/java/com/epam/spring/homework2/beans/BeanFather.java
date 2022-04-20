@@ -1,6 +1,8 @@
 package com.epam.spring.homework2.beans;
 
-public class BeanFather {
+import com.epam.spring.homework2.interfaces.CustomBeanValidator;
+
+public class BeanFather implements CustomBeanValidator {
 
     private String name;
     private int value;
@@ -33,6 +35,15 @@ public class BeanFather {
                 "name='" + name + '\'' +
                 ", value=" + value +
                 '}';
+    }
+
+    @Override
+    public void validate() {
+        if ((name !=null) && (value > 0)) {
+            System.out.println("-- CustomBeanValidator >>>> valid");
+        } else {
+            System.out.println("-- CustomBeanValidator >>>> not valid");
+        }
     }
 
 }
