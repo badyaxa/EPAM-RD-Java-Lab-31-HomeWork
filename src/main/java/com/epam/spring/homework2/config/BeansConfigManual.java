@@ -3,6 +3,7 @@ package com.epam.spring.homework2.config;
 import com.epam.spring.homework2.beans.BeanClassA;
 import com.epam.spring.homework2.beans.BeanClassE;
 import com.epam.spring.homework2.beans.BeanClassF;
+import com.epam.spring.homework2.beans.CustomBeanFactoryPostProcessor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -26,6 +27,11 @@ public class BeansConfigManual {
     @Lazy
     public BeanClassF getBeanF() {
         return new BeanClassF("nameFieldClasF", 6);
+    }
+
+    @Bean("customBeanFactoryPostProcessor")
+    public CustomBeanFactoryPostProcessor getCustomBeanFactoryPostProcessor(){
+        return new CustomBeanFactoryPostProcessor();
     }
 
 }
