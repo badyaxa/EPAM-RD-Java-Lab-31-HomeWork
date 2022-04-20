@@ -1,15 +1,12 @@
 package com.epam.spring.homework2.beans;
 
-import org.springframework.stereotype.Component;
-
-//@Component
 public class BeanFather {
 
     private String name;
-    private String value;
+    private int value;
 
-    public BeanFather(String name, String value) {
-        System.out.println("BeanFather.this.getClass().getSimpleName() = " + this.getClass().getSimpleName());
+    public BeanFather(String name, int value) {
+        System.out.println("-- BeanFather.this.getClass().getSimpleName() = " + this.getClass().getSimpleName() + "(" + name + ", " + value + ")");
         this.name = name;
         this.value = value;
     }
@@ -18,7 +15,7 @@ public class BeanFather {
         return name;
     }
 
-    public String getValue() {
+    public int getValue() {
         return value;
     }
 
@@ -26,15 +23,16 @@ public class BeanFather {
         this.name = name;
     }
 
-    public void setValue(String value) {
+    public void setValue(int value) {
         this.value = value;
     }
 
-    @java.lang.Override
-    public java.lang.String toString() {
-        return "Bean{" +
+    @Override
+    public String toString() {
+        return "toString.BeanFather{" +
                 "name='" + name + '\'' +
-                ", value='" + value + '\'' +
+                ", value=" + value +
                 '}';
     }
+
 }
